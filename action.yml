@@ -1,5 +1,5 @@
-name: "Merge pull requests (automerge-action)"
-description: "Automatically merge pull requests that are ready"
+name: "Merge pull requests"
+description: "Automatically merge requests action"
 runs:
   using: "node20"
   main: "dist/index.js"
