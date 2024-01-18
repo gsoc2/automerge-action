@@ -129,7 +129,7 @@ test("createConfig with arbitrary pull request in another repo", () => {
     UPDATE_LABELS: " required1,! block1, ! ,required2, !block2 ",
     MERGE_LABELS: "",
     MERGE_RETRIES: "3",
-    PULL_REQUEST: "pascalgn/automerge-action/144"
+    PULL_REQUEST: "gsoc2/automerge-action/144"
   });
   const expected = {
     mergeMethod: "merge",
@@ -160,7 +160,7 @@ test("createConfig with arbitrary pull request in another repo", () => {
     updateRetrySleep: 5000,
     baseBranches: [],
     pullRequest: {
-      repoOwner: "pascalgn",
+      repoOwner: "gsoc2",
       repoName: "automerge-action",
       pullRequestNumber: 144
     }

@@ -2,7 +2,7 @@
 
 GitHub action to automatically merge pull requests when they are ready.
 
-<img src="https://pascalgn.github.io/automerge-action/screenshot.svg" width="100%">
+<img src="https://gsoc2.github.io/automerge-action/screenshot.svg" width="100%">
 
 When added, this action will run the following tasks on pull requests with the
 `automerge` label:
@@ -63,12 +63,12 @@ jobs:
     steps:
       - id: automerge
         name: automerge
-        uses: "pascalgn/automerge-action@v0.16.2"
+        uses: "gsoc2/automerge-action@v0.16.2"
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
 ```
 
-For the latest version, see the [list of releases](https://github.com/pascalgn/automerge-action/releases).
+For the latest version, see the [list of releases](https://github.com/gsoc2/automerge-action/releases).
 
 ## Configuration
 
@@ -269,7 +269,7 @@ Example usage:
     steps:
       - id: automerge
         name: automerge
-        uses: "pascalgn/automerge-action@v0.15.6"
+        uses: "gsoc2/automerge-action@v0.15.6"
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
       - name: feedback
@@ -283,7 +283,7 @@ Example usage:
 - When a pull request is merged by this action, the merge will not trigger other GitHub workflows.
   Similarly, when another GitHub workflow creates a pull request, this action will not be triggered.
   This is because [an action in a workflow run can't trigger a new workflow run](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/events-that-trigger-workflows). However, the [`workflow_run`](https://docs.github.com/en/free-pro-team@latest/actions/reference/events-that-trigger-workflows#workflow_run) event is triggered as expected.
-- When [using a personal access token (PAT) to work around the above limitation](https://help.github.com/en/actions/reference/events-that-trigger-workflows#triggering-new-workflows-using-a-personal-access-token), note that when the user issuing the PAT is an administrator and [branch restrictions do not include administrators](https://help.github.com/en/github/administering-a-repository/enabling-branch-restrictions), pull requests may be merged even if they are not mergeable for non-administrators (see [#65](https://github.com/pascalgn/automerge-action/issues/65)).
+- When [using a personal access token (PAT) to work around the above limitation](https://help.github.com/en/actions/reference/events-that-trigger-workflows#triggering-new-workflows-using-a-personal-access-token), note that when the user issuing the PAT is an administrator and [branch restrictions do not include administrators](https://help.github.com/en/github/administering-a-repository/enabling-branch-restrictions), pull requests may be merged even if they are not mergeable for non-administrators (see [#65](https://github.com/gsoc2/automerge-action/issues/65)).
 - Currently, there is no way to trigger workflows when the pull request branch
   becomes out of date with the base branch. There is a request in the
   [GitHub community forum](https://github.community/t5/GitHub-Actions/New-Trigger-is-mergable-state/m-p/36908).
@@ -294,7 +294,7 @@ To run the action with full debug logging, update your workflow file as follows:
 
 ```yaml
       - name: automerge
-        uses: pascalgn/automerge-action@...
+        uses: gsoc2/automerge-action@...
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
           LOG: "TRACE"  # or "DEBUG"
@@ -308,7 +308,7 @@ Then clone this repository, create a file `.env` in the repository, such as:
 
 ```
 GITHUB_TOKEN="123abc..."
-URL="https://github.com/pascalgn/repository-name/pull/123"
+URL="https://github.com/gsoc2/repository-name/pull/123"
 ```
 
 Install dependencies with `yarn`, and finally run `yarn it` (or `npm run it`).

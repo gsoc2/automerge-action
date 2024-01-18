@@ -11,7 +11,7 @@ async function main() {
   const octokit = new Octokit({
     baseUrl: "https://api.github.com",
     auth: `token ${token}`,
-    userAgent: "pascalgn/automerge-action-it"
+    userAgent: "gsoc2/automerge-action-it"
   });
 
   const config = createConfig({

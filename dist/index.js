@@ -44192,7 +44192,7 @@ async function main() {
   const octokit = new Octokit({
     baseUrl: GITHUB_API_URL,
     auth: `token ${token}`,
-    userAgent: "pascalgn/automerge-action"
+    userAgent: "gsoc2/automerge-action"
   });
 
   const config = createConfig(process.env);
@@ -44225,7 +44225,7 @@ function checkOldConfig() {
     logger.error(
       "You have passed configuration options that were used by an old " +
         "version of this action. Please see " +
-        "https://github.com/pascalgn/automerge-action for the latest " +
+        "https://github.com/gsoc2/automerge-action for the latest " +
         "documentation of the configuration options!"
     );
     throw new Error(`old configuration present!`);
