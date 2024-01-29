@@ -1,5 +1,5 @@
 {
-  "name": "automerge-action",
+  "name": "@gsoc2/automerge-action",
   "version": "0.16.3",
   "description": "GitHub action to automatically merge pull requests",
   "main": "lib/api.js",
